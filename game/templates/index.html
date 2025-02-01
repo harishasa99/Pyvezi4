@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyveži4</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Pyveži4</h1>
+
+      <!-- Konfiguracija igre -->
+      <div id="game-setup">
+        <h2>Konfiguracija igre</h2>
+
+        <!-- Izbor režima igre -->
+        <label for="game-mode">Režim igre:</label>
+        <select id="game-mode">
+          <option value="human-vs-human">Čovek protiv čoveka</option>
+          <option value="human-vs-computer">Čovek protiv računara</option>
+          <option value="computer-vs-computer">Računar protiv računara</option>
+        </select>
+
+        <!-- Težina igre -->
+        <div id="difficulty-section">
+          <label for="difficulty">Težina igre:</label>
+          <select id="difficulty">
+            <option value="">Izaberite težinu</option>
+            <option value="easy">Lako</option>
+            <option value="medium">Srednje</option>
+            <option value="hard">Teško</option>
+          </select>
+        </div>
+
+        <!-- Učitavanje stanja igre iz fajla -->
+        <div id="file-upload">
+          <label for="file-input">Učitaj početno stanje:</label>
+          <input type="file" id="file-input" accept=".txt" />
+        </div>
+
+        <!-- Dugme za početak igre -->
+        <button id="start-game-btn">Započni igru</button>
+      </div>
+
+      <!-- Tabla za igru (prikazuje se nakon početka igre) -->
+      
+<div id="game-board-container" style="display: none;">
+  <div id="info">
+    <p id="turn-info">
+      Na potezu: <span id="current-player">Crveni</span>
+    </p>
+    <button id="restart-btn">Restartuj igru</button>
+  </div>
+  <div id="game-board"></div>
+</div>
+
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
