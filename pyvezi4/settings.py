@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j!&%h)_d@fhd$@4cjg*7pyg#5^+(vg%2i+u1fym&o6&)$h4j_!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["pyvezi4.onrender.com"]
 
 
 # Application definition
